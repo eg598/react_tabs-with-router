@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { tabs } from '../../tabs';
 
 export const TabsPage: React.FC = () => {
@@ -11,32 +11,32 @@ export const TabsPage: React.FC = () => {
       <div className="tabs is-boxed">
         <ul>
           <li data-cy="Tab" className={tabId === 'tab-1' ? 'is-active' : ''}>
-            <NavLink
-              to="tab-1"
+            <Link
+              to="/tabs/tab-1"
               relative="path"
-              className={({ isActive }) => (isActive ? 'is-active' : '')}
+              className={tabId === 'tab-1' ? 'is-active' : ''}
             >
               Tab 1
-            </NavLink>
+            </Link>
           </li>
 
           <li data-cy="Tab" className={tabId === 'tab-2' ? 'is-active' : ''}>
-            <NavLink
-              to="tab-2"
+            <Link
+              to="/tabs/tab-2"
               relative="path"
-              className={({ isActive }) => (isActive ? 'is-active' : '')}
+              className={tabId === 'tab-1' ? 'is-active' : ''}
             >
               Tab 2
-            </NavLink>
+            </Link>
           </li>
           <li data-cy="Tab" className={tabId === 'tab-3' ? 'is-active' : ''}>
-            <NavLink
-              to="tab-3"
+            <Link
+              to="/tabs/tab-3"
               relative="path"
-              className={({ isActive }) => (isActive ? 'is-active' : '')}
+              className={tabId === 'tab-1' ? 'is-active' : ''}
             >
               Tab 3
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>
